@@ -4,7 +4,7 @@ st.set_page_config(layout="wide")
 
 if 'kontrol' not in st.session_state:
     st.session_state['kontrol']={'kover':True, 'pertemuan1':False, 'pertemuan2':False, 'pertemuan3':False,
-                                 'pertemuan4':False,'pertemuan5':False}
+                                 'pertemuan4':False,'pertemuan5':False, 'pertemuan6':False}
 
 class tulisan:
     def __init__(self, tulis, ukuran):
@@ -52,6 +52,10 @@ def Pertemuan5():
     tulisanHTML='<iframe src="https://martin-bernard26.github.io/pengelolaanPendidikan/Pertemuan5.html" width=100% height=1000px></iframe>'
     tampil = tulisan(tulisanHTML,1000)
     tampil.tampilkan()
+def Pertemuan6():
+    tulisanHTML='<iframe src="https://martin-bernard26.github.io/pengelolaanPendidikan/pertemuan6.html" width=100% height=1000px></iframe>'
+    tampil = tulisan(tulisanHTML,1000)
+    tampil.tampilkan()
 #================================
 
 if st.session_state['kontrol']['kover']:
@@ -66,34 +70,49 @@ if st.session_state['kontrol']['pertemuan4']:
     Pertemuan4()
 if st.session_state['kontrol']['pertemuan5']:
     Pertemuan5()
+if st.session_state['kontrol']['pertemuan6']:
+    Pertemuan6()
 
 
 #===============================
 
 if st.sidebar.button("Pendahuluan"):
     st.session_state['kontrol']={'kover':True, 'pertemuan1':False, 'pertemuan2':False,
-                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False}
+                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False,
+                                 'pertemuan6':False}
     st.rerun()
 
 if st.sidebar.button("Bab 1"):
     st.session_state['kontrol']={'kover':False, 'pertemuan1':True, 'pertemuan2':False,
-                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False}
+                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False,
+                                 'pertemuan6':False}
     st.rerun()
 
 if st.sidebar.button("Bab 2"):
     st.session_state['kontrol']={'kover':False, 'pertemuan1':False, 'pertemuan2':True,
-                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False}
+                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False,
+                                 'pertemuan6':False}
     st.rerun()
 
 if st.sidebar.button("Bab 3"):
     st.session_state['kontrol']={'kover':False, 'pertemuan1':False, 'pertemuan2':False,
-                                 'pertemuan3':True,'pertemuan4':False,'pertemuan5':False}
+                                 'pertemuan3':True,'pertemuan4':False,'pertemuan5':False,
+                                 'pertemuan6':False}
     st.rerun()
 if st.sidebar.button("Bab 4"):
     st.session_state['kontrol']={'kover':False, 'pertemuan1':False, 'pertemuan2':False,
-                                 'pertemuan3':False,'pertemuan4':True,'pertemuan5':False}
+                                 'pertemuan3':False,'pertemuan4':True,'pertemuan5':False,
+                                 'pertemuan6':False}
     st.rerun()
 if st.sidebar.button("Bab 5"):
     st.session_state['kontrol']={'kover':False, 'pertemuan1':False, 'pertemuan2':False,
-                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':True}
+                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':True,
+                                 'pertemuan6':False}
     st.rerun()
+
+if st.sidebar.button("Bab 6"):
+    st.session_state['kontrol']={'kover':False, 'pertemuan1':False, 'pertemuan2':False,
+                                 'pertemuan3':False,'pertemuan4':False,'pertemuan5':False,
+                                 'pertemuan6':True}
+    st.rerun()
+
