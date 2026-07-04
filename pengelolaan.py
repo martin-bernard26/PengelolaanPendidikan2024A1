@@ -91,7 +91,7 @@ def Pertemuan13():
     tulisanHTML='<iframe src="https://drive.google.com/file/d/1lpH_djptWLjEAhP9w_Ox37OW2hk2zf63/preview" width=100% height=1000px></iframe>'
     tampil = tulisan(tulisanHTML,1000)
     tampil.tampilkan()
-    tulisanHTML='<iframe src="https://martin-bernard26.github.io/pengelolaanPendidikan/UASPengelolaan.html" width=100% height=1000px></iframe>'
+    tulisanHTML='<iframe src="https://martin-bernard26.github.io/pengelolaanPendidikan/uasp.html" width=100% height=1000px></iframe>'
     tampil = tulisan(tulisanHTML,1000)
     tampil.tampilkan()
 #================================
